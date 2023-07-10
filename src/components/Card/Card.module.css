@@ -1,0 +1,50 @@
+.card_container{
+   
+}
+.card {
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgb(17, 39, 87);
+    width: 80%;
+    height: 140px;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: rgba(184, 212, 248, 0.863) 0px 1px 3px 0px, rgba(227, 232, 238, 0.15) 0px 0px 0px 1px;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .card:hover {
+    background: transparent;
+    background-color: #120d29;
+    backdrop-filter: blur(50px);
+    transform: scaleX(1.010);
+    transform-origin: center;
+  }
+  
+.logo{
+    /* border: 2px solid black; */
+    width: 20%;
+    padding-top: 40px;
+    padding-left: 30px;
+    color: white;
+}
+.details{
+    /* border: 2px solid black; */
+    width: 100%;
+    font-family: 'Poppins', sans-serif;   
+}
+p{
+    color: white;
+    /* padding: 5px; */
+    margin-top: 10px;
+    font-size: 14px;
+}
+h4 {
+    color: rgba(133, 161, 197, 0.863);
+}
+h5 {
+    color: rgba(150, 167, 189, 0.863);
+
+}

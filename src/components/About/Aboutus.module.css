@@ -1,0 +1,29 @@
+.main_container {
+  /* background-color: peru; */
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.left_container {
+  height: 60%;
+  width: 50%;
+  /* border: 2px solid white; */
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.right_container {
+  width: 50%;
+  height: 60%;
+
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-weight: bolder;
+  color: whitesmoke;
+  font-size: 4rem;
+}

@@ -7,7 +7,7 @@
 .form{
     border: 2px solid pink;
     border-radius: 20px;
-    height: 80vh;
+    height: 70vh;
     width: 30vw;
     display: flex;
     flex-direction: column;
@@ -36,6 +36,7 @@ h1{
     margin-bottom: 0;
 }
 .button{
+    margin-top: 60px;
     margin-left: 30px;
     height: 40px;
     background: transparent;
@@ -57,6 +58,11 @@ h1{
     border-color: rgb(17, 28, 87);
     background: transparent;
     height: 50px;
+    color:rgb(194, 199, 248);
+}
+
+.item:focus{
+    color: rgb(194, 199, 248)
 }
 .field ::placeholder{
     color: rgb(230, 209, 209);

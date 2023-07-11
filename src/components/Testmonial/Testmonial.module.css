@@ -1,0 +1,9 @@
+.main_container{
+    height: 100vh;
+}
+
+.containers{
+    height: 40%;
+    /* border: 2px solid #ccc; */
+    background-color: transparent;
+}

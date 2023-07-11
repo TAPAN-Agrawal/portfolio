@@ -6,12 +6,13 @@ import { AiOutlineUser } from 'react-icons/ai';
 import { AiOutlineProject } from 'react-icons/ai';
 import { ImFileText2 } from 'react-icons/im';
 import { MdOutlineContactMail } from 'react-icons/md';
-import {useNavigate} from 'react-router-dom'
+import {LuLaptop2} from 'react-icons/lu'
+import { Link, useNavigate } from 'react-router-dom'
 
 
-function Navbar(Props: any) {
+function Navbar() {
 
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
     return <div className={classes.main_container}>
         <Row>
@@ -28,7 +29,9 @@ function Navbar(Props: any) {
                     <div>
                         <AiOutlineHome />
                     </div>
-                    <div className={classes.nav_text}>Home</div>
+                    <div className={classes.nav_text} onClick={() => { navigate('/') }}>
+                        Home
+                    </div>
                 </div>
             </Col>
             <Col span={2} className={classes.navlinks}>
@@ -36,9 +39,18 @@ function Navbar(Props: any) {
                     <div>
                         <AiOutlineUser />
                     </div>
-                    <div className={classes.nav_text} onClick={Props.onHandle}>
-
-                        About
+                    <div className={classes.nav_text} onClick={() => { navigate('/about') }}>
+                    About
+                    </div>
+                </div>
+            </Col>
+            <Col span={2} className={classes.navlinks}>
+                <div className={classes.nav_items}>
+                    <div>
+                        <LuLaptop2 />
+                    </div>
+                    <div className={classes.nav_text} onClick={() => { navigate('/skill') }}>
+                        Skills
                     </div>
                 </div>
             </Col>
@@ -47,7 +59,7 @@ function Navbar(Props: any) {
                     <div>
                         <AiOutlineProject />
                     </div>
-                    <div className={classes.nav_text}>
+                    <div className={classes.nav_text } onClick={() => { navigate('/project') }} >
                         Project
                     </div>
                 </div>
@@ -57,17 +69,17 @@ function Navbar(Props: any) {
                     <div>
                         <ImFileText2 />
                     </div>
-                    <div className={classes.nav_text}>
-                        Resume
+                    <div className={classes.nav_text} onClick={()=>{navigate('/testmonial')}}>
+                       Feed
                     </div>
                 </div>
             </Col>
-            <Col span={2}  className={classes.navlinks}>
+            <Col span={2} className={classes.navlinks}>
                 <div className={classes.nav_items}>
                     <div>
                         <MdOutlineContactMail />
                     </div>
-                    <div className={classes.nav_text} onClick={()=>{navigate('/contact')}}>
+                    <div className={classes.nav_text} onClick={() => { navigate('/contact') }}>
                         ContactUs
                     </div>
 

@@ -19,7 +19,7 @@ function Contact() {
     const validationSchema = yup.object().shape({
         name: yup.string().required("Name required"),
         email: yup.string().required("Email required"),
-        password: yup.string().required("Password required"),
+        password: yup.string().required("Password required").min(8),
         gender: yup.string().required("Gender required"),
         selectedOption: yup.string().required("Selected option required")
 
@@ -29,19 +29,19 @@ function Contact() {
         localStorage.setItem("details", JSON.stringify(values))
         toast("data stored successfully", {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "light",
         })
     }
 
     return <>
         <ToastContainer position="top-right"
-            autoClose={5000}
+            autoClose={2000}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick
@@ -71,7 +71,7 @@ function Contact() {
                     </div>
                     <div className={classes.field}>
                         <label>Password</label><br />
-                        <Field type="text" name="password" placeholder="enter password" className={classes.item} />
+                        <Field type="password" name="password" placeholder="enter password" className={classes.item} />
                         <span className={classes.err}><br />
                             <ErrorMessage name='password' />
                         </span>
@@ -84,7 +84,7 @@ function Contact() {
                         <label>
                             <Field type="radio" name="gender" value="male" />
                             Male
-                        </label>
+                        </label><br/>
                         <label>
                             <Field type="radio" name="gender" value="female" />
                             Female
@@ -97,10 +97,12 @@ function Contact() {
                     <div className={classes.field}>
                         <label>country</label><br />
                         <Field name="selectedOption" as="select" className={classes.item}>
-                            <option value="">Select an option</option>
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
+                           
+                           <option value="" >Select a country</option>
+                            <option value="option1">India</option>
+                            <option value="option2"> America</option>
+                            <option value="option3">Canada</option>
+                          
                         </Field>
                         <span className={classes.err} >
                             <br />
